@@ -3,8 +3,8 @@
 /** @author John Hann */
 
 /**
- * Sink that accepts functions to apply to each event, and to end, and error
- * signals.
+ * Sink that accepts functions to apply to each event,
+ * and to one end or one error.
  */
 export default class Observer {
 	/**

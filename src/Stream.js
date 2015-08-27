@@ -2,8 +2,6 @@
 /** @author Brian Cavalier */
 /** @author John Hann */
 
-import Disposable from './Disposable';
-
 export default class Stream {
     constructor (source) {
         this.source = source;
