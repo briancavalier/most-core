@@ -13,29 +13,29 @@ export default class Observer {
 	 * @param {function(e:Error|*):void} error function to apply to error signal value.
 	 */
 	constructor (event, end, error) {
-    this._event = event;
-    this._end = end;
-    this._error = error;
-    this.active = true;
+        this._event = event;
+        this._end = end;
+        this._error = error;
+        this.active = true;
 	}
 
 	event (t, x) {
-    if (!this.active) {
-        return;
-    }
-    this._event(x);
+        if (!this.active) {
+            return;
+        }
+        this._event(x);
 	}
 
 	end (t, x) {
-    if (!this.active) {
-        return;
-    }
-    this.active = false;
-    this._end(x);
+        if (!this.active) {
+            return;
+        }
+        this.active = false;
+        this._end(x);
 	}
 
 	error (t, e) {
-    this.active = false;
-    this._error(e);
+        this.active = false;
+        this._error(e);
 	}
 }
